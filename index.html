@@ -12,9 +12,7 @@
 
         x.children[2].innerHTML = "done!";
       }
-      function add() {
-        const title = document.getElementById("T").value;
-        const disc = document.getElementById("D").value;
+      function create(title, disc, id) {
         const outer = document.createElement("div");
         const inner1 = document.createElement("div");
         const inner2 = document.createElement("div");
@@ -27,9 +25,14 @@
         outer.appendChild(inner1);
         outer.appendChild(inner2);
         outer.appendChild(inner3);
-        id++;
-        // console.log(outer);
         document.getElementById("para").appendChild(outer);
+      }
+      function add() {
+        // console.log(outer);
+        const title = document.getElementById("T").value;
+        const disc = document.getElementById("D").value;
+        create(title, disc, id);
+        id++;
       }
     </script>
     <title>TODO</title>
